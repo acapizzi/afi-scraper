@@ -311,4 +311,4 @@ df = pd.DataFrame(detaillist)
 df.dropna(axis=0,how='all',inplace=True)
 df.to_csv(detaillist_output,index=False,encoding='utf-8')
 
-browser.quit()
+browser.quit() 
