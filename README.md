@@ -31,3 +31,6 @@ This method has several benefits:
 - [x] Feature: strip quotes, double whitespace etc from Product Titles
 - [x] Bug: still writing empty details to detailslist
 - [x] Bug: inheriting last serieslist codes for all details
+- [ ] Finish get-document module
+- [ ] Finish document network module
+- [ ] Package into containers for parallel deployment of multiple scrapers
