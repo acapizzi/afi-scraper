@@ -34,3 +34,4 @@ This method has several benefits:
 - [ ] Finish get-document module
 - [ ] Finish document network module
 - [ ] Package into containers for parallel deployment of multiple scrapers
+- [ ] Add UML diagram
