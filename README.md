@@ -33,5 +33,7 @@ This method has several benefits:
 - [x] Bug: inheriting last serieslist codes for all details
 - [ ] Finish get-document module
 - [ ] Finish document network module
-- [ ] Package into containers for parallel deployment of multiple scrapers
-- [ ] Add UML diagram
+- [ ] Package into containers
+- [ ] Docker Compose
+- [ ] Option for writing to sqlite or postgres rather than flat files
+- [ ] UI for monitoring scraping progress, container health
