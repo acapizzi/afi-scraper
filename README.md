@@ -27,13 +27,21 @@ This method has several benefits:
 - We can erase state by reloading the base url in between each search
 - Fewer edge cases and handling exceptions, which slows the traditional method down significantly
 
+## Requirements
+
+This script uses several third party packages for speed, simplicity, and **debugging**
+- `pandas` for handling large lists of dictionaries
+- `progress` for monitoring scraping progress through terminal (likely to be replaced by a simple JS UI in future)
+- `beautifulsoup` and `lxml` for fast html scraping
+- `selenium` for the all important webdriver
+
 ## TODO
 - [x] Feature: strip quotes, double whitespace etc from Product Titles
 - [x] Bug: still writing empty details to detailslist
 - [x] Bug: inheriting last serieslist codes for all details
-- [ ] Finish get-document module
-- [ ] Finish document network module
+- [ ] Get-document module
+- [ ] Document-network-map module
 - [ ] Package into containers
 - [ ] Docker Compose
 - [ ] Option for writing to sqlite or postgres rather than flat files
-- [ ] UI for monitoring scraping progress, container health
+- [ ] UI for monitoring scraping progress among multiple containers
