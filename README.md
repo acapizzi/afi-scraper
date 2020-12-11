@@ -36,12 +36,12 @@ This script uses several third party packages for speed, simplicity, and **debug
 - `selenium` for the all important webdriver
 
 ## TODO
-- [x] Feature: strip quotes, double whitespace etc from Product Titles
+- [x] Clean data: strip quotes, double whitespace, etc
 - [x] Bug: still writing empty details to detailslist
 - [x] Bug: inheriting last serieslist codes for all details
 - [ ] Get-document module
 - [ ] Document-network-map module
 - [ ] Package into containers
+- [ ] Option for writing to mongodb in addition to flat files
 - [ ] Docker Compose
-- [ ] Option for writing to sqlite or postgres rather than flat files
 - [ ] UI for monitoring scraping progress among multiple containers
