@@ -202,7 +202,7 @@ for row in serieslist:
                     if regdict:
                         pubslist.append(regdict)
         except (StaleElementReferenceException, NoSuchElementException, AttributeError, TypeError) as e:
-            browser.get_screenshot_as_file("Except"+row["Series"]+str(time.time())+".png")
+            browser.get_screenshot_as_file("Except"+row["Series"]+time.time()+".png")
             logger.debug("2a:%s! - %s",type(e).__name__,reg_index)
         except UnexpectedAlertPresentException:
             handleAlert('regs')
