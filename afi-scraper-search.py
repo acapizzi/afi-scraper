@@ -9,6 +9,7 @@ import time, datetime, re, os, logging, sys
 import pandas as pd
 import numpy as np
 from progress.bar import Bar
+from getPDF import getPubFile
 
 if sys.argv:
     nslice = sys.argv[1]
@@ -202,7 +203,7 @@ for row in serieslist:
                     if regdict:
                         pubslist.append(regdict)
         except (StaleElementReferenceException, NoSuchElementException, AttributeError, TypeError) as e:
-            browser.get_screenshot_as_file("Except"+row["Series"]+str(time.time())+".png")
+            browser.get_screenshot_as_file("Summarytable-"+row["Series"]+"-"+str(time.time())+".png")
             logger.debug("2a:%s! - %s",type(e).__name__,reg_index)
         except UnexpectedAlertPresentException:
             handleAlert('regs')
@@ -297,6 +298,7 @@ for i, pub in enumerate(pubslist):
     logger.debug(i)
     logger.debug(pub)
     detail = search_scrape_details(pub['prodnum'],pub['prodtitle'],pub['Category'],pub['Subcategory'],pub['Series'])
+    #detail['content'] = getPubFile(detail['Prodlink'])
     detaillist.append(detail)
     details_progress.next()
     if i % 20 == 0:
